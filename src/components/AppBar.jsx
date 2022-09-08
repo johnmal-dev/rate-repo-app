@@ -1,6 +1,6 @@
 import { View, StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
-import AppBarButton from './AppBarTab';
+import AppBarTab from './AppBarTab';
 import theme from '../theme';
 
 const styles = StyleSheet.create({
@@ -16,7 +16,14 @@ const styles = StyleSheet.create({
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <AppBarButton text='Repositories' />
+      <AppBarTab
+        text='Repositories'
+        to='/'
+      />
+      <AppBarTab
+        text='Sign In'
+        to='/signin'
+      />
     </View>
   );
 };
